@@ -1,5 +1,5 @@
 <div class="masthead-inner">
-				<div class="site-branding col-md-6 col-sm-6 col-xs-12">
+				<div class="site-branding col-md-3">
 					<?php if ( times_has_logo() ) : ?>
 					<div id="site-logo">
 						<?php times_logo(); ?>
@@ -17,8 +17,6 @@
 					<?php endif; ?>
 				</div>
 				
-				<div class="social-icons col-md-6 col-sm-6 col-xs-12">
-					<?php get_template_part('modules/social/social', 'fa'); ?>	 
-				</div>
+				<?php get_template_part('modules/navigation/menu-primary'); ?>
 				
 			</div>

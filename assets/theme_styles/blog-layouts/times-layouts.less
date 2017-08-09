@@ -1,0 +1,54 @@
+.times {
+	.featured-thumb {
+		border-top: none;
+		border-radius: 7px;
+	}
+	.out-thumb {
+		padding: 10px 5px;
+		.entry-title {
+			font-size: 22px;
+			text-shadow: 1px 1px darken(@background, 4%);
+			a {
+				transition: 0.4s all ease;
+			}
+		}
+		.entry-excerpt {
+			color: lighten(@content,15%);
+			margin-top: 7px;
+			display: inline-block;
+			line-height: 1.6em;
+		}
+		.postedon {
+			margin-top: 10px;
+			.posted-on {
+				background: @accent;
+			}
+			.byline {
+				background: @accent2;
+			}
+			.posted-on, .byline {
+				display: inline-block;
+				padding: 3px 6px;
+				border-radius: 3px;
+				color: @onaccent;
+				text-transform: uppercase;
+				font-weight: bold;
+				letter-spacing: 1px;
+				font-size: 10px;
+				a {
+					color: @onaccent;
+					text-decoration: none;
+				}
+				.transition(0.4s all ease);
+				&:hover {
+					background: black;
+				}
+			}
+		}
+	}
+	&:hover {
+		.entry-title a {
+			color: @accent;
+		}
+	}
+} 

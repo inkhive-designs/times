@@ -1,8 +1,6 @@
 #masthead {
 	color: @content;
-	min-height: 650px;
 	position: relative;
-	overflow-x: hidden;
 	.layer {
 		position: absolute;
 		left: 0;
@@ -76,9 +74,7 @@
 	.masthead-inner { //The magical Header area
 		display: flex;
 		align-items: stretch;
-		min-height: 123px;
-		max-height: 175px;
-		
+
 		@media screen and (max-width: 767px) {
 			display: block;
 			overflow: initial;
@@ -88,11 +84,11 @@
 			background: @accent;
 			right: 5px;
 			position: relative;
-			padding: 30px 0;
+			padding: 6px 0;
 			@media screen and (max-width: 767px) { right: 0; padding: 20px; text-align: center; }
 			z-index: 9;
 			.site-title {
-				font-size: 30px;
+				font-size: 22px;
 				a { color: @onaccent; }
 				margin: 5px 0;
 			}
@@ -115,18 +111,18 @@
 			
 			&:after {
 				content: "";
-			    height: 175px;
-			    width: 175px;
+			    height: 0;
+			    width: 0;
 			    background: rgba(122, 96, 218, 0);
 			    position: absolute;
-			    right: -180px;
-				top: -57px;
-			    border-left: solid 90px @accent;
-			    border-top: solid 90px @accent;
-			    border-bottom: solid 90px transparent;
+			    right: -175px;
+				top: -26px;
+			    border-left: solid 16px @accent;
+			    border-top: solid 63px @accent;
+			    border-bottom: solid 30px transparent;
 			    .transform(rotate(0deg));
 			    transform-origin: left bottom;
-			    border-right: solid 90px transparent;
+			    border-right: solid 160px transparent;
 			    z-index: 7;
 			}
 			

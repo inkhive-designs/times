@@ -1,6 +1,4 @@
-<div id="slickmenu"></div>
-<nav id="site-navigation" class="main-navigation" role="navigation">
-	<div class="container">
+<nav id="site-navigation" class="main-navigation col-md-9" role="navigation">
 		<?php 
 		if (has_nav_menu(  'primary' ) && !get_theme_mod('times_disable_nav_desc', true) ) :
 			$walker = new Times_Menu_With_Description; 
@@ -10,5 +8,5 @@
 			$walker = new Times_Menu_With_Icon;
 		endif;
 			wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => $walker ) );  ?>
-	</div>
 </nav><!-- #site-navigation -->
+<div id="slickmenu"></div>

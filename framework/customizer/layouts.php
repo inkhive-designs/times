@@ -1,5 +1,5 @@
 <?php
-	function times_customize_register_layouts( $wp_customize ) {
+	function times_customizer_register_layouts( $wp_customize ) {
 	// Layout and Design
 	$wp_customize->add_panel( 'times_design_panel', array(
 	    'priority'       => 40,

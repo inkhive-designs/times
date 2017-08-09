@@ -11,11 +11,8 @@
  * @package times
  */
 
-if (is_home() || is_front_page() ) :
-get_header('large');
-else :
-get_header();
-endif; ?>
+
+get_header(); ?>
 
 	<div id="primary" class="content-areas <?php do_action('times_primary-width') ?>">
 		<main id="main" class="site-main <?php do_action('times_main-class') ?>" role="main">

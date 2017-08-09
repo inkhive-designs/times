@@ -14,44 +14,22 @@
 	
 	<?php get_template_part('modules/header/jumbosearch'); ?>
 	
-	<header id="masthead" class="site-header single" role="banner">	
-		<div class="layer">		
+	<header id="masthead" class="site-header" role="banner">	
 		<div class="container masthead-container">
-			
 			<?php get_template_part('modules/header/masthead-inner'); ?>
-			
-			<?php if (get_theme_mod('times_header_image_style') == 'full-image' ) : ?>
-				<div id="mobile-header-image">
-					<img src="<?php header_image(); ?>">
-				</div>	
-			<?php endif; ?>
-			
-			<div id="search-icon">
-				<a id="searchicon">
-					<span class="fa fa-search"></span>
-				</a>
-			</div>	
-			
-			<?php if(is_single()) : ?>
-				<div class="in-header-title">
-					<?php the_title( '<h1 class="entry-title title-font">', '</h1>' ); ?>
-				</div>	
-			<?php endif; ?>
 		</div>	
 		
 		<div id="mobile-search">
 			<?php get_search_form(); ?>
 		</div>
 		
-		</div>
 	</header><!-- #masthead -->
 	
-	<?php get_template_part('modules/navigation/menu-single'); ?>
-	
-	
-	
-	<div class="mega-container">
 		
+	<div class="mega-container">
+		<?php if (is_front_page() && has_header_image() ) : ?>
+			<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+		<?php endif; ?>	
 		<?php if( class_exists('rt_slider') ) {
 		 rt_slider::render('slider', 'swiper' ); 
 	} ?>	

@@ -5,23 +5,29 @@
 	h1.widget-title {
 		font-weight: normal;
 		text-transform: uppercase;
-		color: @content;
+		color: @onaccent;
 		font-size: 18px;
 		margin-bottom: 20px;
 		margin-top: 0px;
 		text-align: center;
-		&:after {
+		background: linear-gradient(to right,  @accent 30%, darken(@accent,10%) 100%);
+		padding: 15px;
+		position: relative;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		&:before {
 			content: "";
-			display: block;
-			width: 30%;
-			margin-left: 35%;
-			height: 2px;
-			margin-top: 14px;
-			background: @accent;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 30px;
+			height: 100%;
+			background: darken(@accent2, 10%);
+			border-left: solid 10px darken(@accent2, 2%);
 		}
 	}
 	.widget {
-		font-size: 14px;
+		font-size: 16px;
 		a {
 			color: @content;
 			font-weight: normal;
@@ -31,13 +37,12 @@
 			}
 		}
 		ul {
-			font-size: 13px;
+			font-size: 15px;
 			margin-left: 0px;
 			li {
 				list-style: none;
 				border-bottom: solid 1px darken(@background,5%);
-				padding: 6px;
-				
+				padding: 6px;				
 				&:last-child {
 					border-bottom: none;
 				}
